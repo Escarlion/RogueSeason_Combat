@@ -15,9 +15,7 @@ Como instalar o URP:
 
 4- Após completar a instalação, va em Edit > Project Settings > Graphics
 
-5- Dentro dos Assets da Unity, há uma pasta chamada "Pipeline", dentro desta pasta há um arquivo nomeado como "Universal Render Pipeline Asset", segure-o e arreste-o para
-
-a aba de Graphics, em um espaço chamado "Scriptable Render Pipeline Assets", no qual deve estar como "none"
+5- Dentro dos Assets da Unity, há uma pasta chamada "Pipeline", dentro desta pasta há um arquivo nomeado como "Universal Render Pipeline Asset", segure-o e arreste-o para a aba de Graphics, em um espaço chamado "Scriptable Render Pipeline Assets", no qual deve estar como "none"
 
 6- Após isso, a maior parte dos problemas deve estar resolvido, mas, talvez seja necessario abrir o GameObject do player e mudar seu material para "Sprite-Lit-Default"
 
