@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -5463996664690831012
     second: Shotgun_5
+  - first:
+      213: 3039674954776129638
+    second: Shotgun_6
+  - first:
+      213: 4762055774655711341
+    second: Shotgun_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,6 +248,48 @@ TextureImporter:
       bones: []
       spriteID: c511f23abfbfb24b0800000000000000
       internalID: -5463996664690831012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shotgun_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660351834481f2a20800000000000000
+      internalID: 3039674954776129638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shotgun_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6883f02f78361240800000000000000
+      internalID: 4762055774655711341
       vertices: []
       indices: 
       edges: []
