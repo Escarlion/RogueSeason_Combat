@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeWeaponControler : MonoBehaviour
+public class MeleeWeaponController : MonoBehaviour
 {
     //Objetos
     [SerializeField] Player player;
@@ -100,5 +100,6 @@ public class MeleeWeaponControler : MonoBehaviour
     {
         isAttacking = false;
     }
+
 
 }
