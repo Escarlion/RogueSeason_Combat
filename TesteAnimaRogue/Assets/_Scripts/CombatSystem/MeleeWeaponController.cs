@@ -9,16 +9,17 @@ public class MeleeWeaponController : MonoBehaviour
     CombatManager combatManager;
     Animator animator;
     WeaponRotationController weaponRotation;
+    Enemy enemy;
 
     //Variaveis
     [SerializeField] int quantCombo = 1;
-    int damage;
+    [SerializeField] int damage = 1;
     int currentCombo = 0;
-    float atkSpeed;
     bool isAttacking = false;
     bool nextAttack = true; 
     private string currentAnimation;
     private string IDLE_ANIMATION;
+    //[SerializeField]float ICD = 0.05f;
 
     private void Start()
     {
@@ -101,5 +102,19 @@ public class MeleeWeaponController : MonoBehaviour
         isAttacking = false;
     }
 
+    public int GetDamage()
+    {
+        return damage;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        enemy = hitInfo.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.EnemyTakeDamage(damage);
+        }
+    }
 
 }

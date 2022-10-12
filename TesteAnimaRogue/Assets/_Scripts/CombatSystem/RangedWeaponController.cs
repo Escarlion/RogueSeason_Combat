@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class RangedWeaponController : MonoBehaviour
 {
+    //Objetos
     [SerializeField] Player player;
+    [SerializeField] Transform firePoint;
+    [SerializeField] GameObject bulletPrefab;
     WeaponRotationController weaponRotationController;
     CombatManager combatManager;
     Animator animator;
 
-    int damage;
+    //Variaveis
     [SerializeField] private int maxAmmo = 1;
-    [SerializeField] int currentAmmo;
-    float shotCD;
-    float reloadCD;
-    float projetileSpeed;
-
+    [SerializeField] int damage = 1;
+    int currentAmmo;
     bool readyToShot = true;
+    float bulletForce = 20f;
 
+    //Animações
     string WEAPON_SHOT;
     string WEAPON_RECHARGE;
     string WEAPON_IDLE;
@@ -47,14 +49,15 @@ public class RangedWeaponController : MonoBehaviour
         weaponRotationController.WeaponRotation();
     }
 
+    //Realiza a animação de tiro e verifica a relação entre a munição
     void Shot()
     {
         if (currentAmmo > 0 && readyToShot)
         {
-                combatManager.NotReadyToSwitchWeapon();
-                readyToShot = false;
-                animator.Play(WEAPON_SHOT);
-                currentAmmo--;  
+            combatManager.NotReadyToSwitchWeapon();
+            readyToShot = false;
+            animator.Play(WEAPON_SHOT);
+            currentAmmo--;  
         }
         else if(currentAmmo == 0 && readyToShot)
         {
@@ -62,6 +65,7 @@ public class RangedWeaponController : MonoBehaviour
         }
     }
 
+    //Realiza a animação de recarga e reseta a munição atual
     void Recharge()
     {
         readyToShot = false;
@@ -70,10 +74,25 @@ public class RangedWeaponController : MonoBehaviour
         animator.Play(WEAPON_RECHARGE);
     }
 
+    //Chamada pela animação
     void ReturnToIdle()
     {
         combatManager.ReadyToSwitchWeapon();
         readyToShot = true;
         animator.Play(WEAPON_IDLE);
+    }
+
+    //Chamada pela animação para criar a instancia do projetil
+    public void BulletShot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb =  bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+    }
+
+    //Acesso ao dano da arma
+    public int GetDamage()
+    {
+        return damage;
     }
 }

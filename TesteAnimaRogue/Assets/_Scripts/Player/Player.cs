@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 5f;
     [HideInInspector] public bool facingRight = true;
     [HideInInspector] public Vector2 movement;
+    
 
 
     private void Start()
