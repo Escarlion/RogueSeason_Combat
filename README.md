@@ -3,7 +3,9 @@ Alguns teste para o sistema de combate de Rogue Season
 
 Versão do editor da Unity recomendado: 2020.3.27f1
 
-Nota: é muito provavel que ao abrir o projeto, ocorra um bug envolvendo os materiais, é recomendado que instale o URP dentro do projeto da unity.
+Nota: Essa pasta está com alguns problemas, não é recomendado seguir o projeto dentro dela
+
+Nota2: é muito provavel que ao abrir o projeto, ocorra um bug envolvendo os materiais, é recomendado que instale o URP dentro do projeto da unity.
 
 Como instalar o URP:
 
