@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashingCooldown = 1f;
     private float dashingTime = 0.2f;
 
+    //Variaveis after image
+    private float lastImageXpos, lastImageYpos;
+    public float distanceBetweenImages = 0.1f;
+
 
     private void Start()
     {
@@ -46,6 +50,8 @@ public class Player : MonoBehaviour
         {
             MoveSpeed = 5f;
         }
+
+        //Ataque esquerdo
         if (Input.GetButtonDown("Fire1"))
         {
             if (combatManager.leftWeaponActive != true && combatManager.canSwitchWeapon)
@@ -54,6 +60,8 @@ public class Player : MonoBehaviour
             }
 
         }
+
+        //Ataque Direito
         if (Input.GetButtonDown("Fire2"))
         {
             if (combatManager.rightWeaponActive != true && combatManager.canSwitchWeapon)
@@ -62,10 +70,13 @@ public class Player : MonoBehaviour
             }
         }
 
+        //Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
+            
         }
+        CheckDash();
     }
 
     private void FixedUpdate()
@@ -101,10 +112,34 @@ public class Player : MonoBehaviour
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(movement.x * dashPower, movement.y * dashPower);
+
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastImageXpos = transform.position.x;
+        lastImageYpos = transform.position.y;
+
         yield return new WaitForSeconds(dashingTime);
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+
+        
+    }
+
+    private void CheckDash()
+    {
+        if(isDashing){
+            if (dashingTime > 0)
+            {         
+                if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages || Mathf.Abs(transform.position.y - lastImageYpos) > distanceBetweenImages)
+                {
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImageXpos = transform.position.x;
+                    lastImageYpos = transform.position.y;
+                }
+            }
+
+        }
+        
     }
 
 }
