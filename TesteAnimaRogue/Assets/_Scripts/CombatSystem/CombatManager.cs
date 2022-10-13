@@ -35,6 +35,7 @@ public class CombatManager : MonoBehaviour
         FlipActiveWeapon();
     }
 
+    //Flipa a arma ativa
     private void FlipActiveWeapon()
     {
         if (leftWeaponActive == true)
@@ -66,24 +67,20 @@ public class CombatManager : MonoBehaviour
         canSwitchWeapon = false;
     }
 
-    //Ativa a arma esquerda caso botão esquerdo seja pressionado
-    public void LeftWeaponConfiguration()
+    //Realiza a configuração das armas de acordo com o botão pressionado na classe Player
+    public void WeaponConfiguration()
     {
         if (leftWeaponActive != true)
         {
             LeftWeaponActivate();
         }
-        GetWeaponDamage();
-    }
-    //Ativa a arma direita caso botão direito seja pressionado
-    public void RightWeaponConfiguration()
-    {
-        if (rightWeaponActive != true)
+        else if (rightWeaponActive != true)
         {
             RightWeaponActivate();
         }
         GetWeaponDamage();
     }
+
     //Muda o botão de ataque no manager
     void ChangeCommand(int value)
     {

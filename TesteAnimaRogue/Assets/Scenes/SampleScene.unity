@@ -3194,6 +3194,8 @@ MonoBehaviour:
   MoveSpeed: 5
   facingRight: 1
   movement: {x: 0, y: 0}
+  dashPower: 24
+  dashingCooldown: 1
 --- !u!114 &1357904904
 MonoBehaviour:
   m_ObjectHideFlags: 0

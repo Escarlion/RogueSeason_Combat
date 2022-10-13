@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         {
             if (combatManager.leftWeaponActive != true && combatManager.canSwitchWeapon)
             {
-                combatManager.LeftWeaponConfiguration();
+                combatManager.WeaponConfiguration();
             }
 
         }
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         {
             if (combatManager.rightWeaponActive != true && combatManager.canSwitchWeapon)
             {
-                combatManager.RightWeaponConfiguration();
+                combatManager.WeaponConfiguration();
             }
         }
 
