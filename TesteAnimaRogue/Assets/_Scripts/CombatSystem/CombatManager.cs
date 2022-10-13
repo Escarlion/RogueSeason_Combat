@@ -8,8 +8,10 @@ public class CombatManager : MonoBehaviour
     [SerializeField] Player player;
     Transform leftWeaponController;
     Transform rightWeaponController;
+    Transform activeWeapon;
     MeleeWeaponController meleeCheck;
     RangedWeaponController rangedCheck;
+    SpriteRenderer activeWeaponSR;
 
     //Variaveis
     [HideInInspector] public string[] command = new string[] { "Fire1", "Fire2" };
@@ -24,7 +26,33 @@ public class CombatManager : MonoBehaviour
     {
         leftWeaponController = player.gameObject.transform.GetChild(0);
         rightWeaponController = player.gameObject.transform.GetChild(1);
+        activeWeapon = leftWeaponController;
         GetWeaponDamage(); //Detecta o dano da arma ativa no começo do jogo
+    }
+
+    private void Update()
+    {
+        FlipActiveWeapon();
+    }
+
+    private void FlipActiveWeapon()
+    {
+        if (leftWeaponActive == true)
+        {
+            activeWeaponSR = player.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
+        else if (rightWeaponActive == true)
+        {
+            activeWeaponSR = player.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>();
+        }
+        if (activeWeapon.rotation.z > 0.90f || activeWeapon.rotation.z < -0.90f)
+        {
+            activeWeaponSR.flipY = true;
+        }
+        else
+        {
+            activeWeaponSR.flipY = false;
+        }
     }
 
     //Função Chamada pelos weapons Controler para dizer se pode ou não trocar a arma
@@ -69,6 +97,7 @@ public class CombatManager : MonoBehaviour
         leftWeaponActive = false;
         rightWeaponController.gameObject.SetActive(true);
         rightWeaponActive = true;
+        activeWeapon = rightWeaponController;
         ChangeCommand(1);
     }
     void LeftWeaponActivate()
@@ -77,6 +106,7 @@ public class CombatManager : MonoBehaviour
         rightWeaponActive = false;
         leftWeaponController.gameObject.SetActive(true);
         leftWeaponActive = true;
+        activeWeapon = leftWeaponController;
         ChangeCommand(0);
     }
 
