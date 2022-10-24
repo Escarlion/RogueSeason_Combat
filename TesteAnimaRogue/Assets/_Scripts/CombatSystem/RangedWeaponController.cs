@@ -5,7 +5,7 @@ using UnityEngine;
 public class RangedWeaponController : MonoBehaviour
 {
     //Objetos
-    [SerializeField] Player player;
+    Player player;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bulletPrefab;
     WeaponRotationController weaponRotationController;
@@ -26,6 +26,7 @@ public class RangedWeaponController : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponentInParent<Player>();
         weaponRotationController = GetComponent<WeaponRotationController>();
         combatManager = player.GetComponent<CombatManager>();
         animator = GetComponent<Animator>();

@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: 9053850089090239912
     second: Faca_11
+  - first:
+      213: -1716277106122937689
+    second: Faca_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -386,6 +389,27 @@ TextureImporter:
       bones: []
       spriteID: 8adccd9cfacb5ad70800000000000000
       internalID: 9053850089090239912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Faca_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa2861b01f8e28e0800000000000000
+      internalID: -1716277106122937689
       vertices: []
       indices: 
       edges: []

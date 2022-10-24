@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeWeaponController : MonoBehaviour
 {
     //Objetos
-    [SerializeField] Player player;
+    Player player;
     CombatManager combatManager;
     Animator animator;
     WeaponRotationController weaponRotation;
@@ -13,16 +13,16 @@ public class MeleeWeaponController : MonoBehaviour
 
     //Variaveis
     [SerializeField] int quantCombo = 1;
-    [SerializeField] int damage = 1;
+    [SerializeField] int[] CDamage;
     int currentCombo = 0;
     bool isAttacking = false;
-    bool nextAttack = true; 
+    bool nextAttack = true;
     private string currentAnimation;
     private string IDLE_ANIMATION;
-    //[SerializeField]float ICD = 0.05f;
 
     private void Start()
     {
+        player = GetComponentInParent<Player>();
         animator = GetComponent<Animator>();
         combatManager = player.GetComponent<CombatManager>();
         IDLE_ANIMATION = gameObject.name + "Idle";
@@ -31,7 +31,7 @@ public class MeleeWeaponController : MonoBehaviour
 
     private void Update()
     {
-        //Verifica se o player Apertou o botão Esq ou Dir do mouse
+        //Verifica se o player Apertou o bot?o Esq ou Dir do mouse
         if (Input.GetButtonDown(combatManager.command[combatManager.commandIndex]))
         {
             ComboStart();
@@ -47,19 +47,19 @@ public class MeleeWeaponController : MonoBehaviour
     //Inicia o sistema de combo, impossibilitando a troca de arma
     public void ComboStart()
     {
-        
+
         if (isAttacking == false)
         {
             if (nextAttack)
             {
                 combatManager.NotReadyToSwitchWeapon();
                 isAttacking = true;
-                ChangeAnimation(gameObject.name+"Attack" + currentCombo);
+                ChangeAnimation(gameObject.name + "Attack" + currentCombo);
                 currentCombo++;
                 ComboCheck();
             }
         }
-        
+
     }
 
     //Finaliza o sistema de combo e possibilita a troca de arma
@@ -72,7 +72,7 @@ public class MeleeWeaponController : MonoBehaviour
         currentCombo = 0;
     }
 
-    //Verifica se o combo ja acabou ou não
+    //Verifica se o combo ja acabou ou n?o
     void ComboCheck()
     {
         if (currentCombo <= quantCombo)
@@ -86,7 +86,7 @@ public class MeleeWeaponController : MonoBehaviour
         }
     }
 
-    //Muda a animação e não permite que ela "reinicie" caso tente rodar uma animação que ja está em andamento
+    //Muda a anima??o e n?o permite que ela "reinicie" caso tente rodar uma anima??o que ja est? em andamento
     void ChangeAnimation(string newAnimation)
     {
         if (currentAnimation == newAnimation) return;
@@ -96,7 +96,7 @@ public class MeleeWeaponController : MonoBehaviour
         currentAnimation = newAnimation;
 
     }
-    //Essa função é usada pela animação para dizer quando pode atacar novamente
+    //Essa fun??o ? usada pela anima??o para dizer quando pode atacar novamente
     void ChangeIsAttackValue()
     {
         isAttacking = false;
@@ -104,7 +104,7 @@ public class MeleeWeaponController : MonoBehaviour
 
     public int GetDamage()
     {
-        return damage;
+        return CDamage[currentCombo];
     }
 
 
@@ -113,7 +113,7 @@ public class MeleeWeaponController : MonoBehaviour
         enemy = hitInfo.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.EnemyTakeDamage(damage);
+            enemy.EnemyTakeDamage(CDamage[currentCombo - 1]);
         }
     }
 
