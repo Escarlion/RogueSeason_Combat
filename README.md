@@ -21,3 +21,9 @@ Como instalar o URP:
 
 6- Após isso, a maior parte dos problemas deve estar resolvido, mas, talvez seja necessario abrir o GameObject do player e mudar seu material para "Sprite-Lit-Default"
 
+Como instalar o Cinemachine:
+
+1- Repita os passos feitos para "baixar" o URP, porem, pesquise "Cinemachine" e instale o pacote.
+
+É recomendado que abra a Scene que esta neste repositorio (Assets>Scenes>SampleScene) para carregar o que foi montado originalmente e entender como as coisas funcionam.
+
