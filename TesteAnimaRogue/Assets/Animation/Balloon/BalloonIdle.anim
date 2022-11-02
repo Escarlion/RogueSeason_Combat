@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaloonAttack1
+  m_Name: BalloonIdle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,18 +20,12 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3754531024933751503, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - time: 0.125
-      value: {fileID: 978227247919216887, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - time: 0.20833333
-      value: {fileID: -6067796443935320323, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - time: 0.33333334
-      value: {fileID: -7983147147392248216, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
+      value: {fileID: 3461203509091440268, guid: 3b062ad8716f3e141b495e732d03cc51, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 24
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,16 +40,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -3754531024933751503, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - {fileID: 978227247919216887, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - {fileID: -6067796443935320323, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
-    - {fileID: -7983147147392248216, guid: 6d322041349bd3240ad72754b9f6ea09, type: 3}
+    - {fileID: 3461203509091440268, guid: 3b062ad8716f3e141b495e732d03cc51, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.625
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,18 +65,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.33333334
-    functionName: ChangeIsAttackValue
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.625
-    functionName: ComboFinish
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
