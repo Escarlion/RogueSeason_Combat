@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Balloon
+  m_Name: Yellow
   m_Shader: {fileID: -6465566751694194690, guid: eccab5bd265f563489d4453030b66d3a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -42,6 +42,6 @@ Material:
     m_Floats: []
     m_Colors:
     - Color_1aef5525cf9b403f99e9a2ace645bc69: {r: 8, g: 0.7924528, b: 0.7924528, a: 0}
-    - Color_738c4ada77d94b81905dea91872cba81: {r: 0, g: 23.489347, b: 23.968628, a: 0}
+    - Color_738c4ada77d94b81905dea91872cba81: {r: 23.968628, g: 3.890196, b: 0, a: 0}
     - _Color: {r: 10.680627, g: 5.152046, b: 0, a: 0}
   m_BuildTextureStacks: []

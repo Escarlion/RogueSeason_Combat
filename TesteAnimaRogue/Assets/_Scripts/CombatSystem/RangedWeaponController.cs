@@ -17,7 +17,7 @@ public class RangedWeaponController : MonoBehaviour
     [SerializeField] int damage = 1;
     int currentAmmo;
     bool readyToShot = true;
-    float bulletForce = 20f;
+    [SerializeField] float bulletForce = 20f;
 
     //Animações
     string WEAPON_SHOT;

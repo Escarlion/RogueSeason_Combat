@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7651786518662125629}
   - component: {fileID: 6153035504565303320}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: WaterBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5bd7c4b6193b6b84b9faf050c1bc5821, type: 2}
+  - {fileID: 2100000, guid: e5cd5816317d5964f8c3133f9ef04888, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61fca5b982d91784baca588a74768f42, type: 3}
+  m_Sprite: {fileID: -1770157449473753226, guid: 0321bd82f9182d3458fd9d213bef2b49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,7 +143,7 @@ Animator:
   m_GameObject: {fileID: 7124704964449087799}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e9d41c3a517760a408ae5766bd5587a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: e0f1da3c2a943ff48b9eb3e20811a71d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfter: 3
+  HitEffect: {fileID: 7400000, guid: fefe5908634a3f148b347151b52911e8, type: 2}

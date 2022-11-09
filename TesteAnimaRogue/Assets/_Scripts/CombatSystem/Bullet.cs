@@ -8,10 +8,10 @@ public class Bullet : MonoBehaviour
     [SerializeField] float destroyAfter = 5f;
     CombatManager combatManager;
     Animator animator;
+    [SerializeField]AnimationClip HitEffect;
     Enemy enemy;
 
     //Variaveis
-    string HIT_EFFECT = "BulletHit";
     int bulletDamage;
 
     private void Start()
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
     //Executa a animação de contato da bala e faz alguma função dependendo do que foi acertado
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.Play(HIT_EFFECT);
+        animator.Play(HitEffect.name);
         if (enemy != null)
         {
             enemy.EnemyTakeDamage(bulletDamage);

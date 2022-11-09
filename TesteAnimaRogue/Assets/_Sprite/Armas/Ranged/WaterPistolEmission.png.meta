@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: e7dea98fca6ebfb49b6e38a8ce80cee1
+guid: 2f4310605da6237448a470849d93eb45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2025789997403619860
-    second: WaterPistol_0
+      213: -1279420626434392109
+    second: WaterPistolEmission_0
   - first:
-      213: -4894303330041840215
-    second: WaterPistol_1
+      213: 6308810590677855953
+    second: WaterPistolEmission_1
   - first:
-      213: 5894954105484345359
-    second: WaterPistol_2
+      213: 2328039484978521508
+    second: WaterPistolEmission_2
   - first:
-      213: 5497399829199772736
-    second: WaterPistol_3
+      213: 8229503891252180426
+    second: WaterPistolEmission_3
   - first:
-      213: 2219909967917599476
-    second: WaterPistol_4
+      213: 5325758750188475084
+    second: WaterPistolEmission_4
   - first:
-      213: 8791114686244249946
-    second: WaterPistol_5
+      213: -6447248925003273208
+    second: WaterPistolEmission_5
   - first:
-      213: -2163991257367326912
-    second: WaterPistol_6
+      213: -5019392131493756836
+    second: WaterPistolEmission_6
   - first:
-      213: -8564314569251954735
-    second: WaterPistol_7
+      213: 2432027977380762133
+    second: WaterPistolEmission_7
   - first:
-      213: -5609737895601179886
-    second: WaterPistol_8
+      213: -3441038178552755493
+    second: WaterPistolEmission_8
   - first:
-      213: 3866753418477918125
-    second: WaterPistol_9
+      213: 8459707054932772105
+    second: WaterPistolEmission_9
   - first:
-      213: -4882826875984293680
-    second: WaterPistol_10
+      213: -2029243011345281848
+    second: WaterPistolEmission_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,232 +136,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterPistol_0
+      name: WaterPistolEmission_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cedb73ffab2f2e3e0800000000000000
-      internalID: -2025789997403619860
+      spriteID: 3dff11b08b59e3ee0800000000000000
+      internalID: -1279420626434392109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_1
+      name: WaterPistolEmission_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad38dd6d01f31cb0800000000000000
-      internalID: -4894303330041840215
+      spriteID: 1de63948ec56d8750800000000000000
+      internalID: 6308810590677855953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_2
+      name: WaterPistolEmission_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0000a0b6851fc150800000000000000
-      internalID: 5894954105484345359
+      spriteID: 4a56a3db39bde4020800000000000000
+      internalID: 2328039484978521508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_3
+      name: WaterPistolEmission_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04cdeb7a400ba4c40800000000000000
-      internalID: 5497399829199772736
+      spriteID: ac5f7c3ff22153270800000000000000
+      internalID: 8229503891252180426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_4
+      name: WaterPistolEmission_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fac31faa54bece10800000000000000
-      internalID: 2219909967917599476
+      spriteID: cc29960cd55e8e940800000000000000
+      internalID: 5325758750188475084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_5
+      name: WaterPistolEmission_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a51ee45da30500a70800000000000000
-      internalID: 8791114686244249946
+      spriteID: 80c29aef245c686a0800000000000000
+      internalID: -6447248925003273208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_6
+      name: WaterPistolEmission_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04fc19faa65f7f1e0800000000000000
-      internalID: -2163991257367326912
+      spriteID: c508ce54379875ab0800000000000000
+      internalID: -5019392131493756836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_7
+      name: WaterPistolEmission_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dfd8036641752980800000000000000
-      internalID: -8564314569251954735
+      spriteID: 512979b5f8c40c120800000000000000
+      internalID: 2432027977380762133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_8
+      name: WaterPistolEmission_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 213f4a90b153622b0800000000000000
-      internalID: -5609737895601179886
+      spriteID: bda4ecc020afe30d0800000000000000
+      internalID: -3441038178552755493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_9
+      name: WaterPistolEmission_9
       rect:
         serializedVersion: 2
         x: 576
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da757664fb779a530800000000000000
-      internalID: 3866753418477918125
+      spriteID: 9054229bebae66570800000000000000
+      internalID: 8459707054932772105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterPistol_10
+      name: WaterPistolEmission_10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 64
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d0d93d93d6bc3cb0800000000000000
-      internalID: -4882826875984293680
+      spriteID: 8cc02d98b3ea6d3e0800000000000000
+      internalID: -2029243011345281848
       vertices: []
       indices: 
       edges: []
@@ -369,15 +369,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e324a414c77f7f48b99322cc2c66a28
+    spriteID: 0c1050dc0967ef84098b1b861d21fb4e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 2f4310605da6237448a470849d93eb45, type: 3}
-      name: _Emission
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
