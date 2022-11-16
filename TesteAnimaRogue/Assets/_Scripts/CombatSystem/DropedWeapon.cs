@@ -81,4 +81,50 @@ public class DropedWeapon : MonoBehaviour
     {
         return icon;
     }
+
+    public string GetDropName()
+    {
+        return prefab.name;
+    }
+
+    public int GetDropDamage()
+    {
+        if(isRanged == true)
+        {
+            return rangedWeapon.GetDamage();
+        }
+        else if(isMagic == true)
+        {
+            return 0;
+        }
+        else
+        {
+            return 0;
+        }
+        
+    }
+    public string GetMeleeDropDamage()
+    {
+        return meleeWeapon.GetDamageinText();
+    }
+
+    public string GetDropWeaponType()
+    {
+        if (isMelee == true)
+        {
+            return "Melee";
+        }
+        else if (isRanged == true)
+        {
+            return "Ranged";
+        }
+        else if (isMagic == true)
+        {
+            return "Magic";
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

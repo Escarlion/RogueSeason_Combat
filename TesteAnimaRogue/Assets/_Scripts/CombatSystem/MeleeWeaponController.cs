@@ -105,10 +105,18 @@ public class MeleeWeaponController : MonoBehaviour
     {
         isAttacking = false;
     }
-
     public int GetDamage()
     {
         return CDamage[currentCombo];
+    }
+    public string GetDamageinText()
+    {
+        string allDamage = "" + CDamage[0].ToString();
+        for (int i = 1; i < CDamage.Length; i++)
+        {
+            allDamage += " + " + CDamage[i].ToString();
+        }
+        return allDamage;
     }
 
 
