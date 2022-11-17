@@ -13,22 +13,6 @@ public class WeaponChoice : MonoBehaviour
         combatManager = player.GetComponent<CombatManager>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GetNewWeapon();
-        }
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            ChangeRightWeapon();
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            ChangeLeftWeapon();
-        }
-    }
-
     //Pega o prefab do spawn
     void GetNewWeapon()
     {
@@ -38,19 +22,21 @@ public class WeaponChoice : MonoBehaviour
     }
 
     //Muda a arma direita
-    void ChangeRightWeapon()
+    public void ChangeRightWeapon()
     {
+        GetNewWeapon();
         Instantiate(NewWeapon, player.transform);
-        player.transform.GetChild(2).SetSiblingIndex(0);
-        player.transform.GetChild(1).SetSiblingIndex(2);
+        player.transform.GetChild(2).SetSiblingIndex(1);
         combatManager.WeaponSelect();
         DetectWeaponTypeAndDestroy(2);
     }
     //Muda a arma esquerda
-    void ChangeLeftWeapon()
+    public void ChangeLeftWeapon()
     {
+        GetNewWeapon();
         Instantiate(NewWeapon, player.transform);
-        player.transform.GetChild(2).SetSiblingIndex(1);
+        player.transform.GetChild(2).SetSiblingIndex(0);
+        player.transform.GetChild(1).SetSiblingIndex(2);
         combatManager.WeaponSelect();
         DetectWeaponTypeAndDestroy(2);  
     }
