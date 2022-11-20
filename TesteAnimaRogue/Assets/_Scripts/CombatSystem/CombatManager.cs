@@ -262,7 +262,6 @@ public class CombatManager : MonoBehaviour
         {
             LeftWeaponDamage = magicCheck.GetDamage();
         }*/
-        Debug.Log(leftWeaponController.name);
         return LeftWeaponDamage;
 
     }

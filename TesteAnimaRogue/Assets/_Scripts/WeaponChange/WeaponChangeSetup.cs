@@ -14,9 +14,13 @@ public class WeaponChangeSetup : MonoBehaviour
     private void Start()
     {
         combatManager = GameObject.FindGameObjectWithTag("Player").GetComponent<CombatManager>();
-        drop = GameObject.FindGameObjectWithTag("Drop").GetComponent<DropedWeapon>();
     }
-
+    //Recebe as informações do prefab 
+    public void SetDropItem(GameObject dropSystem)
+    {
+        drop = dropSystem.GetComponent<DropedWeapon>();
+    }
+    //Preenche todas as informações na UI
     public void FillUI()
     {
         UpdateIcons();

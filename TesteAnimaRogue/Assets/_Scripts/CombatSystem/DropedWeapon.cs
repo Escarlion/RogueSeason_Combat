@@ -6,7 +6,7 @@ public class DropedWeapon : MonoBehaviour
 {
     [SerializeField] WeightedRandomList<Transform> Weapons;
     Transform prefab;  
-    SpriteRenderer sr;
+    [SerializeField]SpriteRenderer sr;
     MeleeWeaponController meleeWeapon;
     RangedWeaponController rangedWeapon;
     public Sprite icon;
@@ -14,12 +14,10 @@ public class DropedWeapon : MonoBehaviour
 
     bool isRanged = false, isMelee = false, isMagic = false;
 
-    private void Start()
+    /*private void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
-        SpawnLoot();
-        
-    }
+        sr = GetComponent<SpriteRenderer>();     
+    }*/
 
     //Usado por outros scripts para spawnar a arma
     public void SpawnLoot()
