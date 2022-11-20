@@ -17,14 +17,6 @@ public class WeaponChangeSetup : MonoBehaviour
         drop = GameObject.FindGameObjectWithTag("Drop").GetComponent<DropedWeapon>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            FillUI();
-        }
-    }
-
     public void FillUI()
     {
         UpdateIcons();

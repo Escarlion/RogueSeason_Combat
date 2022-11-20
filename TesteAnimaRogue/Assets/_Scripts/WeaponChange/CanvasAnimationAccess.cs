@@ -14,12 +14,10 @@ public class CanvasAnimationAccess : MonoBehaviour
         animator = GetComponent<Animator>();
         weaponChangeSetup = GetComponent<WeaponChangeSetup>();
     }
-    private void Update()
+
+    public void PlayOpenWeaponChange()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            animator.Play(openWeaponChange.name);
-        }
+        animator.Play(openWeaponChange.name);
     }
 
     public void PlayCloseWeaponChange()

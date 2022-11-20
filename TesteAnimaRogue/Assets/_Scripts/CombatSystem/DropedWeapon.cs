@@ -108,6 +108,7 @@ public class DropedWeapon : MonoBehaviour
         return meleeWeapon.GetDamageinText();
     }
 
+    //Retorna o tipo da arma
     public string GetDropWeaponType()
     {
         if (isMelee == true)
@@ -126,5 +127,10 @@ public class DropedWeapon : MonoBehaviour
         {
             return null;
         }
+    }
+
+    public void DestroyDrop()
+    {
+        Destroy(this.gameObject);
     }
 }
