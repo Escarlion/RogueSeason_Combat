@@ -90,17 +90,30 @@ public class RangedWeaponController : MonoBehaviour
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);           
     }
 
-    //Acesso ao dano da arma
+    //Acesso a informações da arma
     public int GetDamage()
     {
         return damage;
     }
 
+    public int GetMaxAmmo()
+    {
+        return maxAmmo;
+    }
     public Sprite GetIcon()
     {
         return icon;
     }
 
+    public string GetRechargeTime()
+    {
+        return WEAPON_RECHARGE.length.ToString("F2")+"s";
+    }
+
+    public string GetFireFreq()
+    {
+        return WEAPON_SHOT.length.ToString("F2")+"s";
+    }
     public void DestroyThis()
     {
         Destroy(this.gameObject);

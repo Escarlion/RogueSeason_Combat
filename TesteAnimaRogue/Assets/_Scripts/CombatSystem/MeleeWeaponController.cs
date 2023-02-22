@@ -119,6 +119,18 @@ public class MeleeWeaponController : MonoBehaviour
         return allDamage;
     }
 
+    public string GetAttackSpeed()
+    {
+        float veloMedia = 0;
+        for (int i = 0; i < Ataques.Length; i++)
+        {
+            veloMedia += Ataques[i].length;
+        }
+        veloMedia = veloMedia / Ataques.Length;
+
+        return veloMedia.ToString("F2");
+    }
+
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
