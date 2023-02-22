@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1962895084405653992}
   - component: {fileID: 1962895084405653995}
   - component: {fileID: 1962895084405654006}
+  - component: {fileID: 7963239253152667693}
   - component: {fileID: 1962895084405653993}
   m_Layer: 0
   m_Name: WaterPistol
@@ -156,6 +157,21 @@ MonoBehaviour:
   WEAPON_SHOT: {fileID: 7400000, guid: 370f3a967f3c1fa448cbdf14b100e4ef, type: 2}
   WEAPON_RECHARGE: {fileID: 7400000, guid: 415a0ff6e40f74a4da78b77b24aac5f5, type: 2}
   WEAPON_IDLE: {fileID: 7400000, guid: 50613871fd1af4344bce06e344204a26, type: 2}
+--- !u!114 &7963239253152667693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962895084405653997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba2423fb059dc847afb00dad699d4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeIntensityType: 0
+  perpetualStrength: 0
+  perpetualTime: 0
 --- !u!114 &1962895084405653993
 MonoBehaviour:
   m_ObjectHideFlags: 0

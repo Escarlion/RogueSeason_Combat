@@ -25,6 +25,8 @@ public class RangedWeaponController : MonoBehaviour
     [SerializeField] AnimationClip WEAPON_RECHARGE;
     [SerializeField] AnimationClip WEAPON_IDLE;
 
+   
+
     private void Start()
     {
         player = GetComponentInParent<Player>();
@@ -85,7 +87,7 @@ public class RangedWeaponController : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb =  bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);           
     }
 
     //Acesso ao dano da arma
@@ -103,4 +105,5 @@ public class RangedWeaponController : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
 }
