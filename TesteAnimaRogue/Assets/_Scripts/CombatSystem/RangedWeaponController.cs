@@ -43,6 +43,7 @@ public class RangedWeaponController : MonoBehaviour
         {
             Shot();
         }
+
     }
     private void FixedUpdate()
     {
@@ -50,16 +51,16 @@ public class RangedWeaponController : MonoBehaviour
     }
 
     //Realiza a animação de tiro e verifica a relação entre a munição
-    void Shot()
+    private void Shot()
     {
         if (currentAmmo > 0 && readyToShot)
         {
             combatManager.NotReadyToSwitchWeapon();
             readyToShot = false;
             animator.Play(WEAPON_SHOT.name);
-            currentAmmo--;  
+            currentAmmo--;
         }
-        else if(currentAmmo == 0 && readyToShot)
+        else if(currentAmmo <= 0 && readyToShot)
         {
             Recharge();
         }
@@ -77,9 +78,16 @@ public class RangedWeaponController : MonoBehaviour
     //Chamada pela animação
     void ReturnToIdle()
     {
-        combatManager.ReadyToSwitchWeapon();
         readyToShot = true;
+        combatManager.ReadyToSwitchWeapon();
         animator.Play(WEAPON_IDLE.name);
+    }
+    void ReadyToShot()
+    {
+        if (readyToShot == false)
+        {
+            readyToShot = true;
+        }
     }
 
     //Chamada pela animação para criar a instancia do projetil

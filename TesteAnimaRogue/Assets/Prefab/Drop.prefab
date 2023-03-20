@@ -107,6 +107,10 @@ MonoBehaviour:
       weight: 1
     - item: {fileID: 1962895084405653994, guid: d4bf630003dd37b4d947a226f8dab7bb, type: 3}
       weight: 1
+    - item: {fileID: 1962895084405653994, guid: 8c95bcd4d4b85c54b9d72bc74f8258cb, type: 3}
+      weight: 1
+    - item: {fileID: 1962895084405653994, guid: 69a9cda685e03e843a1261c74e0272fa, type: 3}
+      weight: 1
   sr: {fileID: 909530305515164567}
   icon: {fileID: 0}
 --- !u!114 &909530305515164564
